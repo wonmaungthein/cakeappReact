@@ -3,6 +3,11 @@ import "./cake.css";
 import Search from "./Search";
 import Cake from "./Cake";
 
+const cakeListStyle = {
+  background: "orange",
+  padding: 20
+};
+
 export class CakeList extends React.Component {
   constructor() {
     super();
@@ -35,8 +40,10 @@ export class CakeList extends React.Component {
   render() {
     return (
       <div>
-        <Search onChange={this.onchangeHandler} />
-        <p>
+        <div className="search-button">
+          <Search onChange={this.onchangeHandler} />
+        </div>
+        <p style={cakeListStyle}>
           {this.state.cakes.map((cake, index) => {
             return <Cake key={index} {...cake} />;
           })}

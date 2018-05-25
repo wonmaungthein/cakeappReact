@@ -1,3 +1,9 @@
 img {
   width: 240px;
 }
+
+.search-button {
+  background: rgb(9, 106, 185);
+  height: 50px;
+  padding-top: 30px;
+}
